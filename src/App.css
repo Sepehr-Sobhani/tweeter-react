@@ -1,4 +1,103 @@
-.App {
-  text-align: center;
-  background-color: lightblue;
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+ html {
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Bungee', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+.App {
+  margin: 0 auto;
+  width: 100%;
+  color: #545149;
+  background-color: #f4f1ec;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-self: flex-end;
+  flex-grow: 2;
+}
+
+/* Small screens 
+@media only screen and (max-width: 500px) {
+  nav {
+    height: fit-content;
+    flex-direction: column;
+  }
+  header {
+    visibility: hidden;
+  }
+  header > .profile-pic {
+    visibility: hidden;
+  }
+  main {
+    margin-top: auto;
+  }
+} */
+
+/* Tablet view
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    background-color: goldenrod;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  }
+} */
+
+/* Desktop view
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  body > nav {
+    background-color: #4056A1;
+  }
+
+  body > header {
+    margin-top: 8em;
+    margin-left: 2em;
+    margin-right: 2em;
+    flex-basis: content;
+    flex-shrink: 2;
+  }
+
+  main {
+    margin-top: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  #tweet-container {
+    margin-top: 1em;
+  }
+} */
