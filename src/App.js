@@ -5,6 +5,7 @@ import { Navigation } from './components/Navigation';
 import { Profile } from './components/Profile';
 import { TweetForm } from './components/TweetForm';
 import { Tweet } from './components/Tweet';
+import { Tweets } from './components/Tweets';
 
 const initialTweetData = [
   {
@@ -70,9 +71,7 @@ function App() {
       <main className="container">
         {/* below we are giving the addNewTweet function as a prop to the TweetForm component, so that the component can use the function to set the value of newTweet */}
         <TweetForm addNewTweet={addNewTweet}/>
-        <section className="tweets">
-          {tweets}
-        </section>
+        <Tweets tweetData={tweetData} />
       </main>
     </div>
   );
